@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import React, { useState } from "react";
 import OrderModal from "../components/OrderModal";
 import Header from "../components/Header";
+import Head from "next/head";
 
 const products = [
   // Holders
@@ -62,30 +63,46 @@ const products = [
 export default function Products() {
   const [modalOpen, setModalOpen] = useState(false);
   return (
-    <div className="min-h-screen flex flex-col font-sans bg-gradient-to-br from-[#d32f2f] via-[#f5f5f5] to-[#616161]">
-      {/* Shared Header */}
-      <Header variant="light" />
-      <main className="flex-1 p-8 flex flex-col items-center pt-24">
-        <h1 className="text-3xl font-bold text-center mb-10 text-gray-800">Our Pottery Gallery</h1>
-        <div className="w-full max-w-7xl">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-center">
-            {products.map((product, idx) => (
-              <div key={idx} className="flex flex-col items-center bg-white rounded-xl shadow-md p-4 transition hover:shadow-lg">
-                <Image src={product.src} alt={product.title} width={240} height={240} className="rounded mb-3 object-cover w-full h-60" />
-                <h2 className="font-medium text-base text-gray-900 text-center mb-2 min-h-[2.5rem] flex items-center justify-center">{product.title}</h2>
-                <button
-                  className="text-xs px-4 py-2 bg-[#d32f2f] text-white rounded shadow hover:bg-[#b71c1c] transition font-semibold mt-1"
-                  onClick={() => setModalOpen(true)}
-                >
-                  Order Now
-                </button>
-              </div>
-            ))}
+    <>
+      <Head>
+        <title>Products | Misfitz Pottery</title>
+        <meta name="description" content="Browse our unique handmade pottery, mugs, planters, trays, and more. Each piece is crafted with love in Salt Lake City, Utah." />
+        <meta property="og:title" content="Products | Misfitz Pottery" />
+        <meta property="og:description" content="Browse our unique handmade pottery, mugs, planters, trays, and more. Each piece is crafted with love in Salt Lake City, Utah." />
+        <meta property="og:image" content="/images/misfitzlogo.png" />
+        <meta property="og:url" content="https://misfitzpottery.com/products" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Products | Misfitz Pottery" />
+        <meta name="twitter:description" content="Browse our unique handmade pottery, mugs, planters, trays, and more. Each piece is crafted with love in Salt Lake City, Utah." />
+        <meta name="twitter:image" content="/images/misfitzlogo.png" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://misfitzpottery.com/products" />
+      </Head>
+      <div className="min-h-screen flex flex-col font-sans bg-gradient-to-br from-[#d32f2f] via-[#f5f5f5] to-[#616161]">
+        {/* Shared Header */}
+        <Header variant="light" />
+        <main className="flex-1 p-8 flex flex-col items-center pt-24">
+          <h1 className="text-3xl font-bold text-center mb-10 text-gray-800">Our Pottery Gallery</h1>
+          <div className="w-full max-w-7xl">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-center">
+              {products.map((product, idx) => (
+                <div key={idx} className="flex flex-col items-center bg-white rounded-xl shadow-md p-4 transition hover:shadow-lg">
+                  <Image src={product.src} alt={product.title} width={240} height={240} className="rounded mb-3 object-cover w-full h-60" />
+                  <h2 className="font-medium text-base text-gray-900 text-center mb-2 min-h-[2.5rem] flex items-center justify-center">{product.title}</h2>
+                  <button
+                    className="text-xs px-4 py-2 bg-[#d32f2f] text-white rounded shadow hover:bg-[#b71c1c] transition font-semibold mt-1"
+                    onClick={() => setModalOpen(true)}
+                  >
+                    Order Now
+                  </button>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-        <OrderModal open={modalOpen} onClose={() => setModalOpen(false)} />
-      </main>
-      <Footer />
-    </div>
+          <OrderModal open={modalOpen} onClose={() => setModalOpen(false)} />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 } 
