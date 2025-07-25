@@ -6,7 +6,7 @@ import Header from "./components/Header";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col font-sans">
+    <div className="min-h-screen flex flex-col font-sans bg-gradient-to-br from-[#d32f2f] via-[#f5f5f5] to-[#616161]">
       {/* Head */}
       <Head>
         <title>Misfitz Pottery | Handmade Pottery & Ceramics</title>
@@ -70,7 +70,7 @@ export default function Home() {
         <div className="relative w-full md:w-1/2 flex justify-center mb-10 md:mb-0 min-h-[340px]">
           <video
             src="/images/SnapInsta.to_AQNMJgavpubJAMPd959ER3hoaXvk5tKxl9aFDiJpSKaXhpacQ1riQJUVgHLwJNOBOwvkd4UB9WzL8EuF3tOcAVIMvRMscrKPIy0RbGo.mp4"
-            className="relative w-64 h-64 object-cover rounded-lg shadow-xl z-40"
+            className="w-full max-w-2xl aspect-square sm:aspect-video object-cover rounded-lg shadow-xl z-40"
             style={{ background: '#fff' }}
             autoPlay
             loop
@@ -85,7 +85,7 @@ export default function Home() {
           <p className="text-lg text-gray-800 mb-6 max-w-xl">
             Discover our one-of-a-kind handcrafted plant feeders, designed to bring both beauty and function to your home or garden. Each piece is made with care and creativity, ensuring no two are exactly alike. Explore our collection of unique ceramics, from whimsical planters to innovative feeders and accent pieces—perfect for plant lovers and anyone seeking something truly special.
           </p>
-          <a href="/products" className="bg-black text-white px-6 py-3 rounded font-semibold hover:bg-gray-800 transition">Shop Unique Items</a>
+          <a href="/products" className="bg-[#d32f2f] text-white px-6 py-3 rounded font-semibold hover:bg-[#b71c1c] transition">Shop Unique Items</a>
         </div>
       </section>
       {/* Mission/Action Section with Video */}
@@ -130,7 +130,7 @@ export default function Home() {
       <section className="py-12 px-4 text-center bg-gray-50 border-t">
         <h4 className="text-xl font-semibold mb-2">Interested in a Piece?</h4>
         <p className="mb-4 text-gray-700">Contact us for questions, or custom orders.</p>
-        <a href="/contact" className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition">Contact Form</a>
+        <a href="/contact" className="bg-[#d32f2f] text-white px-6 py-2 rounded hover:bg-[#b71c1c] transition">Contact Form</a>
       </section>
 
       <Footer />

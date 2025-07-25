@@ -5,7 +5,7 @@ import Header from "../components/Header";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-white flex flex-col font-sans">
+    <div className="min-h-screen bg-gradient-to-br from-[#d32f2f] via-[#f5f5f5] to-[#616161] flex flex-col font-sans">
       {/* Shared Header */}
       <Header variant="light" />
       <main className="flex-1 flex flex-col items-center px-2 py-10 md:py-16 bg-white">
@@ -60,7 +60,7 @@ export default function Contact() {
               <label className="block mb-1 font-medium text-gray-700">Message</label>
               <textarea name="message" required rows={5} className="w-full border px-3 py-2 rounded" placeholder="Let us know how we can help!" />
             </div>
-            <button type="submit" className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition w-full font-semibold">Send Message</button>
+            <button type="submit" className="bg-[#d32f2f] text-white px-6 py-2 rounded hover:bg-[#b71c1c] transition w-full font-semibold">Send Message</button>
           </form>
         </div>
       </main>
