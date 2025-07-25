@@ -45,3 +45,5 @@ next-env.d.ts
 /public/images/Products/**/*.jpg
 /public/images/Products/**/*.jpeg
 /public/images/Products/**/*.mp4
+
+.vercel

@@ -6,7 +6,7 @@ import Header from "./components/Header";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col font-sans bg-gradient-to-br from-[#d32f2f] via-[#f5f5f5] to-[#616161]">
+    <div className="min-h-screen flex flex-col font-sans bg-white">
       {/* Head */}
       <Head>
         <title>Misfitz Pottery | Handmade Pottery & Ceramics</title>

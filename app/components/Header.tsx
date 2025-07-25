@@ -24,7 +24,7 @@ export default function Header({ variant = "dark" }: { variant?: "dark" | "light
   );
 
   return (
-    <nav className="fixed top-0 left-0 w-full flex items-center justify-between p-4 sm:p-6 z-30 bg-white/80 backdrop-blur border-b border-gray-200">
+    <nav className="fixed top-0 left-0 w-full flex items-center justify-between p-4 sm:p-6 z-30 bg-transparent">
       <div className="flex items-center">
         <Link href="/" className="flex items-center space-x-3">
           <Image src="/images/misfitzlogo.png" alt="Misfitz Pottery Logo" width={40} height={40} className="rounded-full" />

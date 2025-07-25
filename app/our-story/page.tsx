@@ -4,9 +4,9 @@ import Header from "../components/Header";
 
 export default function OurStory() {
   return (
-    <div className="min-h-screen flex flex-col font-sans bg-gradient-to-br from-[#d32f2f] via-[#f5f5f5] to-[#616161]">
+    <div className="min-h-screen flex flex-col font-sans bg-white">
       {/* Shared Header */}
-      <Header variant="light" />
+      <Header variant="dark" />
       {/* Hero Section */}
       <section className="relative w-full h-[600px] flex items-center justify-center overflow-hidden">
         <Image

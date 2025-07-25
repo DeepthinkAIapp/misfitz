@@ -8,8 +8,11 @@ export default function Contact() {
     <div className="min-h-screen bg-gradient-to-br from-[#d32f2f] via-[#f5f5f5] to-[#616161] flex flex-col font-sans">
       {/* Shared Header */}
       <Header variant="light" />
-      <main className="flex-1 flex flex-col items-center px-2 py-10 md:py-16 bg-white">
+      <main className="flex-1 flex flex-col items-center px-2 pt-24 pb-10 md:py-16 bg-white">
         <div className="w-full max-w-2xl mx-auto">
+          <div className="flex justify-center mb-6">
+            <Image src="/images/misfitzlogo.png" alt="Misfitz Pottery Logo" width={100} height={100} className="rounded-full" />
+          </div>
           <h1 className="text-3xl md:text-4xl font-bold text-center mb-2">Contact Us</h1>
           <div className="text-center text-sm text-gray-700 mb-6">
             Email: <a href="mailto:Gracie@misfitzpottery.com" className="underline">Gracie@misfitzpottery.com</a><br />
