@@ -1,103 +1,139 @@
 import Image from "next/image";
+import Head from "next/head";
+import Footer from "./components/Footer";
+import HeroSlideshow from "./components/HeroSlideshow";
+import Header from "./components/Header";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen flex flex-col font-sans">
+      {/* Head */}
+      <Head>
+        <title>Misfitz Pottery | Handmade Pottery & Ceramics</title>
+        <meta name="description" content="Handmade ceramics and pottery. Contact us for custom orders or questions." />
+      </Head>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+      {/* Shared Header */}
+      <Header variant="dark" />
+
+      {/* Hero Section */}
+      <HeroSlideshow />
+      {/* Welcome Section */}
+      <section className="py-16 px-4 bg-white text-center">
+        <h2 className="text-4xl sm:text-5xl font-bold mb-6">Welcome to Misfitz Pottery</h2>
+        <div className="max-w-4xl mx-auto text-lg text-gray-800 space-y-6">
+          <p>
+            Misfitz Pottery is a creative studio based in Salt Lake City, UT, dedicated to crafting unique, high-quality ceramics that bring warmth and artistry to your home. Every piece is handmade with care, reflecting our passion for pottery and our commitment to the local arts community.
+          </p>
+          <p>
+            Our mission is to celebrate individuality and creativity through functional art. We believe that every mug, bowl, and vase should be as unique as the person who uses it. Whether you’re looking for a special gift or a new favorite piece for your kitchen, we hope you find something that speaks to you.
+          </p>
+          <p>
+            We invite you to explore our gallery, follow us on Instagram for the latest creations, or reach out for custom orders and collaborations. Thank you for supporting local, handmade art!
+          </p>
+        </div>
+      </section>
+
+      {/* Category Grid Section */}
+      <section className="flex justify-center py-8 bg-white">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 w-full max-w-2xl mx-auto">
+          <a href="/products" className="relative col-span-2 row-span-2 aspect-square md:aspect-auto">
+            <img src="/images/Screenshot 2025-07-25 000423-topaz-enhance-3.8x-faceai.jpeg" alt="Artist Creations" className="w-full h-full object-cover rounded" />
+            <span className="absolute bottom-2 left-2 text-white text-base md:text-xl font-bold drop-shadow">Artist Creations</span>
           </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+          <a href="/products" className="relative aspect-square">
+            <img src="/images/misfitzlogo.png" alt="Home" className="w-full h-full object-cover rounded" />
+            <span className="absolute bottom-2 left-2 text-white text-base md:text-xl font-bold drop-shadow">Home</span>
+          </a>
+          <a href="/products" className="relative aspect-square">
+            <img src="images\SnapInsta.to_495530066_17930523618045147_873500654778066379_n-topaz-enhance-2.9x.jpeg" alt="Custom Mugs" className="w-full h-full object-cover rounded" />
+            <span className="absolute bottom-2 left-2 text-white text-base md:text-xl font-bold drop-shadow">Mugs</span>
+          </a>
+          <a href="/products" className="relative aspect-square">
+            <img src="images\SnapInsta.to_521166626_17939004015045147_2794291604490061666_n-topaz-enhance-2.9x.jpeg" alt="Custom Ceramic Planters" className="w-full h-full object-cover rounded" />
+            <span className="absolute bottom-2 left-2 text-white text-base md:text-xl font-bold drop-shadow">Planters</span>
+          </a>
+          <a href="/products" className="relative aspect-square">
+            <img src="images\Screenshot 2025-07-25 000602-topaz-enhance-3.9x.jpeg" alt="All Products" className="w-full h-full object-cover rounded" />
+            <span className="absolute bottom-2 left-2 text-white text-base md:text-xl font-bold drop-shadow">All Products</span>
+          </a>
+          <a href="/products" className="relative aspect-square">
+            <img src="images\SnapInsta.to_495729772_17930523627045147_1427442616563115144_n-topaz-enhance-2.9x.jpeg" alt="On Sale" className="w-full h-full object-cover rounded" />
+            <span className="absolute bottom-2 left-2 text-white text-base md:text-xl font-bold drop-shadow">On Sale</span>
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+      </section>
+
+      {/* Unique Handcrafted Plant Feeders & More Section */}
+      <section className="py-20 px-4 flex flex-col md:flex-row items-center justify-center bg-white max-w-7xl mx-auto mt-8 md:mt-16">
+        {/* Overlapping images on the left */}
+        <div className="relative w-full md:w-1/2 flex justify-center mb-10 md:mb-0 min-h-[340px]">
+          <video
+            src="/images/SnapInsta.to_AQNMJgavpubJAMPd959ER3hoaXvk5tKxl9aFDiJpSKaXhpacQ1riQJUVgHLwJNOBOwvkd4UB9WzL8EuF3tOcAVIMvRMscrKPIy0RbGo.mp4"
+            className="relative w-64 h-64 object-cover rounded-lg shadow-xl z-40"
+            style={{ background: '#fff' }}
+            autoPlay
+            loop
+            muted
+            playsInline
+            controls
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+        </div>
+        {/* Text and CTA on the right */}
+        <div className="w-full md:w-1/2 flex flex-col items-start md:pl-16">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Unique Handcrafted Plant Feeders & More</h2>
+          <p className="text-lg text-gray-800 mb-6 max-w-xl">
+            Discover our one-of-a-kind handcrafted plant feeders, designed to bring both beauty and function to your home or garden. Each piece is made with care and creativity, ensuring no two are exactly alike. Explore our collection of unique ceramics, from whimsical planters to innovative feeders and accent pieces—perfect for plant lovers and anyone seeking something truly special.
+          </p>
+          <a href="/products" className="bg-black text-white px-6 py-3 rounded font-semibold hover:bg-gray-800 transition">Shop Unique Items</a>
+        </div>
+      </section>
+      {/* Mission/Action Section with Video */}
+      <section className="py-16 px-4 bg-white flex flex-col md:flex-row items-center justify-center gap-12 max-w-6xl mx-auto">
+        <div className="flex-1 text-center md:text-left">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Pottery in Action</h2>
+          <p className="text-lg text-gray-800 max-w-xl mx-auto md:mx-0">
+            At Misfitz Pottery, we believe in the beauty of the process. Our studio is a place where creativity comes to life—where clay is shaped, glazed, and fired into one-of-a-kind pieces. Watch our artists at work and see the passion that goes into every creation.
+          </p>
+        </div>
+        <div className="flex-1 flex justify-center">
+          <video
+            src="/images/potteryinaction.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="rounded-lg shadow-lg w-full max-w-md h-auto object-cover"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </div>
+      </section>
+
+
+      {/* Transform Your Space Section */}
+      <section className="relative w-full h-[520px] flex items-center justify-bottom overflow-hidden border-b">
+        <img
+          src="/images/Screenshot 2025-07-25 000423-topaz-enhance-3.8x-faceai.jpeg"
+          alt="Pottery background"
+          className="absolute inset-0 w-full h-full object-cover object-bottom z-0"
+          style={{ objectPosition: 'center bottom', transform: 'translateY(0%)' }}
+        />
+        <div className="absolute inset-0 bg-white/60 z-10" />
+        <div className="relative z-20 flex flex-col items-center justify-center w-full h-full text-center px-4">
+          <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6 drop-shadow-lg">Experience the Art of Misfitz Pottery</h2>
+          <p className="max-w-2xl mx-auto text-lg text-gray-800/90 drop-shadow">
+            Each piece at Misfitz Pottery is a celebration of creativity and craftsmanship. Our handmade ceramics are designed to bring warmth, beauty, and a touch of whimsy to your home. Whether you’re searching for a one-of-a-kind mug, a statement bowl, or a heartfelt gift, discover how our unique creations can transform your everyday moments into something truly special.
+          </p>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-12 px-4 text-center bg-gray-50 border-t">
+        <h4 className="text-xl font-semibold mb-2">Interested in a Piece?</h4>
+        <p className="mb-4 text-gray-700">Contact us for questions, or custom orders.</p>
+        <a href="/contact" className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition">Contact Form</a>
+      </section>
+
+      <Footer />
     </div>
   );
 }

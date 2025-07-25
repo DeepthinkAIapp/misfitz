@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Ignore large product images and videos
+/public/images/Products/**/*.png
+/public/images/Products/**/*.jpg
+/public/images/Products/**/*.jpeg
+/public/images/Products/**/*.mp4
